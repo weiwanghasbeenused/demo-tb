@@ -5,17 +5,39 @@
 	
 }
 body{
-	padding: 20px 60px;
+	padding: 60px 0;
 	background-color: #D9EFEE;
+}
+h1, h2, h3{
+	font-size: 1em;
+	font-weight: normal;
+}
+.description-title{
+	border-top: 1px solid #202F49;
+	padding-top: 10px;
+	width: 300px;
+
+}
+.description{
+	font-size: 20px;
+	margin-bottom: 10px;
+	padding-left: 60px;
+	padding-right: 60px;
 }
 .sans{
 	font-family: 'Inter', sans-serif;
 }
-#nav{
+#nav_ctner{
+	padding-left: 60px;
+	padding-right: 60px;
+	min-height: 100vh;
+}
+.nav{
 	background-color: #202F49;
 	padding: 20px 20px;
 	font-size: 16px;
 	font-weight: 700;
+	margin-bottom: 20px;
 }
 .nav_btn_ctner{
 	position: relative;
@@ -96,24 +118,24 @@ body{
 	transition: all .35s;
 }
 
-#title_ctner{
+#project_origins_ctner{
+	margin-top: 500px;
 	margin-top: 50px;
-	font-family: 'Arbutus Slab', serif;
+	
 	color: #202F49;
-	font-size: 80px;
+	
 	
 
 }
 .title_ctner{
+	font-family: 'Arbutus Slab', serif;
+	font-size: 80px;
 	position: relative;
 	height: 204px;
 	display: inline-block;
 }
 .title_mask{
-	position: absolute;
-	overflow: hidden;
-	padding-top: 40px;
-	height: 102px;
+	
 }
 .title_underline{
 	height: 2px;
@@ -126,12 +148,156 @@ body{
 .title_mask:nth-of-type(2){
 	top: 84px;
 }
-.title_ctner:hover .title_mask{
+.title_ctner .title_mask{
+	position: absolute;
+	overflow: hidden;
+	
+	height: 102px;
 	padding-top: 0;
 	transition: all .5s;
 }
-.title_ctner:hover .title_underline{
+.title_ctner .title_underline{
 	transform: scale(0, 1);
 	transition: all .5s;
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	transform-origin: center;
+}
+.unviewed .title_ctner .title_mask{
+	padding-top: 40px;
+}
+.unviewed .title_ctner .title_underline{
+	transform: scale(1);
+}
+.body_text{
+	font-size: 18px;
+	line-height: 24px;
+	transition: all .5s .15s;
+}
+.unviewed .body_text{
+	opacity: 0;
+	transform: translate(0, 40px);
+	transition: all .5s .0s;
+}
+.title_ctner + .body_text{
+	margin-top: 20px;
+}
+.image_holder{
+	position: relative;
+}
+.image_overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background-color: #202F49;
+	/*background-color: #00F;*/
+	mix-blend-mode: screen;
+	transition: all .5s;
+}
+.unviewed .image_overlay{
+	background-color: #D9EFEE;
+}
+.float-right {
+	float: right;
+}
+.image{
+	filter: grayscale(1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	transition: all .5s;
+}
+.unviewed .image{
+	opacity: .75;
+	background-color: #000;
+}
+.image_holder:hover .image{
+	filter: none;
+}
+.image_holder:hover .image_overlay{
+	transition: opacity .25s;
+	opacity: 0;
+}
+#project_origins_col2 .text_holder{
+	display: inline-block;
+	vertical-align: top;
+	width: 66.7%;
+	/*padding-right: 60px;*/
 }
 
+#project_origins_col2 .image_holder{
+	display: inline-block;
+	vertical-align: top;
+	width: 33.3%;
+	/*margin-left: 30px;*/
+}
+#project_origins_image_1{
+	height: 350px;
+}
+#project_origins_image_1 .image{
+	background-image: url('../asset/images/01.jpg');
+	/*background-position: -220px center;*/
+	background-size: 120%;
+	/*width: 200px;*/
+	
+}
+#project_origins_image_2{
+	width: 60%;
+	height: 200px;
+	margin-top: 40px;
+}
+#project_origins_image_2 .image{
+	background-image: url('../asset/images/02.jpg');
+	background-size: cover;	
+}
+#project_origins_image_3{
+	height: 600px;
+}
+#project_origins_image_3 .image{
+	background-image: url('../asset/images/03.jpg');
+	background-position: -220px center;
+	background-size: cover;
+}
+@media screen and (min-width: 830px){
+	.col{
+		display: inline-block;
+		vertical-align: top;
+	}
+	#project_origins_col1{
+		width: 50%;
+		padding-right: 15px;
+
+	}
+	#project_origins_col2{
+		width: 50%;
+		padding-left: 15px;
+	}
+	#project_origins_col2 .text_holder{
+		padding-right: 20px;
+	}
+}
+@media screen and (min-width: 1300px){
+	.col{
+		display: inline-block;
+		vertical-align: top;
+	}
+	#project_origins_col1{
+		width: 50%;
+		padding-right: 40px;
+
+	}
+	#project_origins_col2{
+		width: 50%;
+		padding-left: 40px;
+	}
+	#project_origins_col2 .text_holder{
+		padding-right: 60px;
+	}
+}
