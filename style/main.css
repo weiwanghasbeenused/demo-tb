@@ -1,0 +1,137 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+body{
+	padding: 20px 60px;
+	background-color: #D9EFEE;
+}
+.sans{
+	font-family: 'Inter', sans-serif;
+}
+#nav{
+	background-color: #202F49;
+	padding: 20px 20px;
+	font-size: 16px;
+	font-weight: 700;
+}
+.nav_btn_ctner{
+	position: relative;
+	display: inline-block;
+	line-height: 2em;
+	border-bottom: 2px solid transparent;
+	cursor: pointer;
+}
+.nav_btn_base{
+	padding: 0px 15px;
+	background-color: #D9EFEE;
+	color: #202F49;
+}
+.nav_btn_mask{
+	color: #D9EFEE;
+	background-color: #202F49;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	height: 35px;
+	padding: 0px 15px;
+}
+#btn1:hover > div{
+	/*text-decoration: underline;*/
+}
+#btn1:hover .nav_btn_mask{
+	height: 0;
+	transition: all .35s;
+}
+
+#btn2{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 36px;
+	height: 40px;
+	border: none;
+	width: 160px;
+	text-align: center;
+
+}
+
+
+#btn2 .nav_btn_mask{
+	color: #202F49;
+	background-color: #D9EFEE;
+	height: 0;
+	z-index: 1;
+	bottom: 0;
+	top: auto;
+	width: 100%;
+
+}
+#btn2 .mask_text_holder{
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#btn2 .nav_btn_base{
+	height: 40px;
+	position: absolute;
+	z-index: 2;
+	color: #D9EFEE;
+	background-color: #202F49;
+	overflow: hidden;
+	width: 100%;
+
+}
+
+#btn2:hover .nav_btn_base{
+	height: 18px;
+	transition: all .35s;
+}
+#btn2:hover .nav_btn_mask{
+	height: 19px;
+	transition: all .35s;
+}
+
+#title_ctner{
+	margin-top: 50px;
+	font-family: 'Arbutus Slab', serif;
+	color: #202F49;
+	font-size: 80px;
+	
+
+}
+.title_ctner{
+	position: relative;
+	height: 204px;
+	display: inline-block;
+}
+.title_mask{
+	position: absolute;
+	overflow: hidden;
+	padding-top: 40px;
+	height: 102px;
+}
+.title_underline{
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	transform-origin: center;
+}
+.title_mask:nth-of-type(2){
+	top: 84px;
+}
+.title_ctner:hover .title_mask{
+	padding-top: 0;
+	transition: all .5s;
+}
+.title_ctner:hover .title_underline{
+	transform: scale(0, 1);
+	transition: all .5s;
+}
+
