@@ -266,11 +266,11 @@ h1, h2, h3{
 	background-size: cover;	
 }
 #project_origins_image_3{
-	height: 440px;
+	height: 380px;
 }
 #project_origins_image_3 .image{
 	background-image: url('../asset/images/03.jpg');
-	background-position: -180px center;
+	background-position: -150px center;
 	background-size: cover;
 }
 @media screen and (min-width: 830px){
