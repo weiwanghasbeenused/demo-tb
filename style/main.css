@@ -150,6 +150,9 @@ img{
 	height: 144px;
 	display: inline-block;
 }
+.caption{
+	font-family: 'Arbutus Slab', serif;
+}
 .title_mask{
 	
 }
@@ -223,7 +226,7 @@ img{
 .float-right {
 	float: right;
 }
-.image{
+.image_bg{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -231,11 +234,11 @@ img{
 	height: 100%;
 	transition: all .5s;
 }
-.unviewed .image{
+.unviewed .image_bg{
 	opacity: .75;
 	background-color: #000;
 }
-.image_holder:hover .image{
+.image_holder:hover .image_bg{
 	filter: none;
 }
 .image_holder:hover .image_overlay{
@@ -261,7 +264,7 @@ img{
 	height: 220px;
 	margin-top: 30px;
 }
-#project_origins_image_1 .image{
+#project_origins_image_1 .image_bg{
 	background-image: url('../asset/images/01.jpg');
 	background-size: 120%;	
 }
@@ -270,14 +273,14 @@ img{
 	height: 175px;
 	margin-top: 30px;
 }
-#project_origins_image_2 .image{
+#project_origins_image_2 .image_bg{
 	background-image: url('../asset/images/02.jpg');
 	background-size: cover;	
 }
 #project_origins_image_3{
 	height: 380px;
 }
-#project_origins_image_3 .image{
+#project_origins_image_3 .image_bg{
 	background-image: url('../asset/images/03.jpg');
 	background-position: -150px center;
 	background-size: cover;
@@ -287,7 +290,8 @@ img{
 	position: relative;
 	margin-top: 50px;
 }
-#sticky_col_right{
+.history_section_ctner .body_text{
+	position: -webkit-sticky;
 	position: sticky;
 	top: 20px;
 }
@@ -301,8 +305,12 @@ img{
 	background-color: #004268;
 	z-index: 10;
 }
-.history_image_ctner img{
+.history_image_ctner .image_holder{
 	margin-bottom: 30px;
+}
+.history_image_ctner .image_holder + .caption{
+	margin-top: -15px;
+	margin-bottom: 50px;
 }
 .ch_title{
 	text-align: center;
@@ -340,7 +348,7 @@ img{
 		height: 204px;
 	}
 	.title_ctner .title_mask{
-		height: 102px;
+		height: 78px;
 	}
 	.body_text{
 		font-size: 18px;
@@ -353,7 +361,7 @@ img{
 	#project_origins_image_3{
 		height: 600px;
 	}
-	#project_origins_image_3 .image{
+	#project_origins_image_3 .image_bg{
 		background-position: -220px center;
 	}
 	.title_mask:nth-of-type(2){
@@ -371,8 +379,18 @@ img{
 	.image_overlay{
 		opacity: 1;
 	}
-	.image{
+	.image_bg{
 		filter: grayscale(1);
+	}
+	.unviewed .image{
+		filter: grayscale(1);
+		/*background-color: #fff;*/
+	}
+	.unviewed .image + .image_overlay{
+		opacity: 1;
+	}
+	.image + .image_overlay{
+		opacity: 0;
 	}
 
 	#sticky_ctner .left-col{
@@ -390,6 +408,10 @@ img{
 	}
 	.ch_title{
 		margin-bottom: 20px;
+	}
+	.caption{
+		font-size: 14px;
+		line-height: 18px;
 	}
 }
 @media screen and (min-width: 1300px){
