@@ -152,6 +152,7 @@ img{
 }
 .caption{
 	font-family: 'Arbutus Slab', serif;
+	transition: all .25s;
 }
 .title_mask{
 	
@@ -200,6 +201,9 @@ img{
 	opacity: 0;
 	transform: translate(0, 40px);
 	transition: all .5s .0s;
+}
+.unviewed .caption{
+	color: #fff;
 }
 .title_ctner + .body_text{
 	margin-top: 20px;
@@ -294,7 +298,18 @@ img{
 	position: -webkit-sticky;
 	position: sticky;
 	top: 20px;
+	transition: all 1s;
+	
 }
+.history_section_ctner.unviewed-section{
+	
+}
+.history_section_ctner.unviewed-section .body_text{
+	color: #fff;
+	opacity: .5;
+	/*transition: none;*/
+}
+
 .timeline{
 	width: 2px;
 	height: 100%;
@@ -321,6 +336,7 @@ img{
 	padding-bottom: 50px;
 
 }
+
 @media screen and (min-width: 830px){
 	h1{
 		font-size: 68px;

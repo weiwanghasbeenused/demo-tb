@@ -8,21 +8,27 @@ sProject_origins_ctner.classList.add('unviewed');
 
 var sTop = window.scrollY;
 var sTop_dev = - wH * 5 / 10;
+var sTop_dev_section = - wW * 2.5 / 10;
 var sProject_origins_ctner_top = sProject_origins_ctner.offsetTop;
 var sHistory_section_ctner_top = [];
 var sCh_ctner_top = [];
 var sHistory_section_ctner = document.getElementsByClassName('history_section_ctner');
-// [].forEach.call(sHistory_section_ctner, function(el){
-// 	el.classList.add('unviewed');
-// });
+[].forEach.call(sHistory_section_ctner, function(el, i){
+	el.classList.add('unviewed-section');
+});
 var sCh_ctner = document.getElementsByClassName('ch_ctner');
 [].forEach.call(sCh_ctner, function(el){
 	el.classList.add('unviewed');
+	// var this_history_section = el.querySelectorAll('.history_section');
+	// [].forEach.call(sCh_ctner, function(sec, i){
+	// 	if(i != 0)
+	// 		el.classList.add('unviewed-section');
+	// });
 });
 
 
 var viewing_section = 0;
-
+var viewing_history_section = 0;
 var ticking = false;
 
 window.addEventListener('load', function(){
@@ -61,62 +67,59 @@ function requestTick() {
 			// 		sProject_origins_ctner.classList.add('unviewed');
 			// 	}
 			// }
-			// else if(sTop >= sProject_origins_ctner_top + sTop_dev && 
-			// 		sTop < sHistory_section_ctner_top[0] + sTop_dev){
-			// 	if(viewing_section != 1){
-			// 		viewing_section = 1;
-			// 		console.log('passed '+sProject_origins_ctner_top);
-			// 		sProject_origins_ctner.classList.remove('unviewed');
-			// 		sHistory_section_ctner[0].classList.add('unviewed');
+			if( 
+					sTop < sHistory_section_ctner_top[0] + sTop_dev_section){
+				if(viewing_history_section != 0){
+					viewing_history_section = 0;
+					sHistory_section_ctner[0].classList.add('unviewed-section');
+				}
+			}
+			else if(sTop >= sHistory_section_ctner_top[0] + sTop_dev_section && 
+					sTop < sHistory_section_ctner_top[1] + sTop_dev_section){
+				if(viewing_history_section != 1){
+					viewing_history_section = 1;
+					console.log('passed '+sHistory_section_ctner_top[0]);
+					sHistory_section_ctner[1].classList.add('unviewed-section');
+					sHistory_section_ctner[0].classList.remove('unviewed-section');
 					
-			// 	}
-			// }
-			// else if(sTop >= sHistory_section_ctner_top[0] + sTop_dev && 
-			// 		sTop < sHistory_section_ctner_top[1] + sTop_dev){
-			// 	if(viewing_section != 2){
-			// 		viewing_section = 2;
-			// 		console.log('passed '+sHistory_section_ctner_top[0]);
-			// 		sProject_origins_ctner.classList.add('unviewed');
-			// 		sHistory_section_ctner[1].classList.add('unviewed');
-			// 		sHistory_section_ctner[0].classList.remove('unviewed');
-					
-			// 	}
-			// }
-			// else if(sTop >= sHistory_section_ctner_top[1] + sTop_dev && 
-			// 		sTop < sHistory_section_ctner_top[2] + sTop_dev){
-			// 	if(viewing_section != 3){
-			// 		viewing_section = 3;
-			// 		sHistory_section_ctner[0].classList.add('unviewed');
-			// 		sHistory_section_ctner[1].classList.remove('unviewed');
-			// 		sHistory_section_ctner[2].classList.add('unviewed');
-			// 	}
-			// }
-			// else if(sTop >= sHistory_section_ctner_top[2] + sTop_dev && 
-			// 		sTop < sHistory_section_ctner_top[3] + sTop_dev){
-			// 	if(viewing_section != 4){
-			// 		viewing_section = 4;
-			// 		sHistory_section_ctner[1].classList.add('unviewed');
-			// 		sHistory_section_ctner[2].classList.remove('unviewed');
-			// 		sHistory_section_ctner[3].classList.add('unviewed');
-			// 		console.log(sHistory_section_ctner[2].innerText);
-			// 	}
-			// }
-			// else if(sTop >= sHistory_section_ctner_top[3] + sTop_dev && 
-			// 		sTop < sHistory_section_ctner_top[4] + sTop_dev){
-			// 	if(viewing_section != 5){
-			// 		viewing_section = 5;
-			// 		sHistory_section_ctner[2].classList.add('unviewed');
-			// 		sHistory_section_ctner[3].classList.remove('unviewed');
-			// 		console.log(sHistory_section_ctner[2].innerText);
+				}
+			}
+			else if(sTop >= sHistory_section_ctner_top[1] + sTop_dev_section && 
+					sTop < sHistory_section_ctner_top[2] + sTop_dev_section){
+				if(viewing_history_section != 2){
+					viewing_history_section = 2;
+					sHistory_section_ctner[0].classList.add('unviewed-section');
+					sHistory_section_ctner[1].classList.remove('unviewed-section');
+					sHistory_section_ctner[2].classList.add('unviewed-section');
+				}
+			}
+			else if(sTop >= sHistory_section_ctner_top[2] + sTop_dev_section && 
+					sTop < sHistory_section_ctner_top[3] + sTop_dev_section){
+				if(viewing_history_section != 3){
+					viewing_history_section = 3;
+					sHistory_section_ctner[1].classList.add('unviewed-section');
+					sHistory_section_ctner[2].classList.remove('unviewed-section');
+					sHistory_section_ctner[3].classList.add('unviewed-section');
+					console.log(sHistory_section_ctner[2].innerText);
+				}
+			}
+			else if(sTop >= sHistory_section_ctner_top[3] + sTop_dev_section && 
+					sTop < sHistory_section_ctner_top[4] + sTop_dev_section){
+				if(viewing_history_section != 4){
+					viewing_history_section = 4;
+					sHistory_section_ctner[2].classList.add('unviewed-section');
+					sHistory_section_ctner[3].classList.remove('unviewed-section');
+					console.log(sHistory_section_ctner[2].innerText);
 
-			// 	}
-			// }
-			// else if(sTop >= sHistory_section_ctner_top[4]){
-			// 	if(viewing_section != 'end'){
-			// 		viewing_section = 'end';
-			// 		sHistory_section_ctner[3].classList.add('unviewed');
-			// 	}
-			// }
+				}
+			}
+			else if(sTop >= sHistory_section_ctner_top[4]){
+				if(viewing_history_section != 'end'){
+					viewing_history_section = 'end';
+					sHistory_section_ctner[3].classList.add('unviewed-section');
+				}
+			}
+
 			if(sTop < sProject_origins_ctner_top + sTop_dev){
 				if(viewing_section != 0){
 					viewing_section = 0;
