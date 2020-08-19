@@ -239,7 +239,7 @@ a{
 #opening_logo_ctner{
 	height: 100vh;
 	position: relative;
-	z-index: 1000;
+	z-index: 500;
 }
 #opening_logo{
 	width: 200px;
