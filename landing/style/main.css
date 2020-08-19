@@ -146,6 +146,11 @@ a{
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -10px);
+	transition: opacity .5s
+}
+.logo_toggle #nav_center{
+	opacity: 0;
+	transition: opacity 0s
 }
 #nav_right{
 	float: right;
@@ -234,6 +239,7 @@ a{
 #opening_logo_ctner{
 	height: 100vh;
 	position: relative;
+	z-index: 1000;
 }
 #opening_logo{
 	width: 200px;
@@ -241,6 +247,14 @@ a{
 	left: 50%;
 	top: 50%;
 	transform: translate( -50%, -50% );
+	transform-origin: center;
+	transition: width .25s;
+}
+.logo_toggle #opening_logo{
+	position:fixed;
+	top: 20px;
+	width: 100px;
+	transform: translate( -50%, 0);
 }
 
 #opening_bg_1{
