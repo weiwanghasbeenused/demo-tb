@@ -115,7 +115,7 @@ a{
 	width: 100vw;
 	max-width: 100%;
 	z-index: 1000;
-	padding: 30px 40px;
+	padding: 30px 40px 20px 40px;
 	transition: background-color 1s;
 	font-weight: bold;
 	font-size: 14px;
