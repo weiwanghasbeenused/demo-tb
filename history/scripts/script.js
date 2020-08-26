@@ -152,14 +152,14 @@ function scrollEvents(){
 	}
 }
 
-var sToggle_email = document.getElementById('toggle_email');
-var sPopup = document.getElementById('popup');
-sToggle_email.addEventListener('click', function(){
-	var alttext = sToggle_email.getAttribute('alttext');
-	sPopup.classList.toggle('input_email');
-	sToggle_email.setAttribute('alttext', sToggle_email.innerText);
-	toggle_email.innerText = alttext;
-});
+// var sToggle_email = document.getElementById('toggle_email');
+// var sPopup = document.getElementById('popup');
+// sToggle_email.addEventListener('click', function(){
+// 	var alttext = sToggle_email.getAttribute('alttext');
+// 	sPopup.classList.toggle('input_email');
+// 	sToggle_email.setAttribute('alttext', sToggle_email.innerText);
+// 	toggle_email.innerText = alttext;
+// });
 
 var cancel = document.getElementsByClassName('cancel')[0];
 cancel.addEventListener('click', function(){
