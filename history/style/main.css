@@ -483,21 +483,21 @@ a{
 	vertical-align: middle;
 	margin-right: 30px;
 }
-#footer_social_holder > a:last-type{
+#footer_social_holder > a:last-of-type{
 	margin-right: 0px;
 }
 #social_facebook > img{
-	width: 27px;
+	width: 24px;
 
 }
 #social_youtube > img{
-	width: 31px;
-}
-#social_instagram > img{
 	width: 28px;
 }
+#social_instagram > img{
+	width: 24px;
+}
 #social_twitter > img{
-	width: 30px;
+	width: 26px;
 }
 .footer{
 	font-size: 14px;
@@ -528,19 +528,22 @@ a{
 }
 #present_amex{
 	margin-top: 30px;
-	width: 160px;
+	width: 125px;
 }
 #sponsor_nthp{
-	margin-left: 30px;
-	width: 200px;
+	/*margin-left: 50px;*/
+	width: 175px;
+	margin-top: 30px;
 }
 #sponsor_tnm{
-	margin-left: 30px;
-	width: 160px;
+	margin-left: 50px;
+	margin-top: 15px;
+	width: 150px;
 }
 #sponsor_nps{
-	margin-left: 30px;
-	width: 60px;
+	margin-left: 50px;
+	margin-top: 15px;
+	width: 55px;
 }
 .unview_popup #footer{
 	padding-bottom: 60px;
@@ -646,6 +649,25 @@ a{
 		top: 75px;
 		transition: all 1s;
 	}
+	#present_amex{
+		margin-top: 30px;
+		width: 125px;
+	}
+	#sponsor_nthp{
+		margin-top: 0;
+		/*margin-left: 50px;*/
+		width: 175px;
+	}
+	#sponsor_tnm{
+		margin-top: 0;
+		margin-left: 50px;
+		width: 150px;
+	}
+	#sponsor_nps{
+		margin-left: 50px;
+		margin-top: 15px;
+		width: 55px;
+	}
 }
 @media screen and (min-width: 1300px){
 	
@@ -663,23 +685,23 @@ a{
 	}
 	#presenterd_holder,
 	#sponsored_holder{
-		margin-left: 50px;
-		margin-right: 50px;
+		margin-left: 100px;
+		margin-right: 100px;
 	}
 	#present_amex{
 		/*margin-top: 30px;*/
 		/*width: 160px;*/
 	}
 	#sponsor_nthp{
-		margin-left: 60px;
+		/*margin-left: 85px;*/
 		/*width: 200px;*/
 	}
 	#sponsor_tnm{
-		margin-left: 60px;
+		margin-left: 85px;
 		/*width: 160px;*/
 	}
 	#sponsor_nps{
-		margin-left: 60px;
+		margin-left: 85px;
 		/*width: 60px;*/
 	}
 
