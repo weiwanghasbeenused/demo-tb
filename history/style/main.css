@@ -27,6 +27,67 @@ img{
 a{
 	text-decoration: none;
 }
+.serif{
+	font-family: 'Arbutus Slab', serif;
+}
+#popup{
+	position: fixed;
+	width: 100vw;
+	max-width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	background-color: #3BBBB4;
+	z-index: 999;
+	bottom: 0;
+	left: 0;
+}
+#popup > p,
+#popup > input{
+	display: inline-block;
+	vertical-align: middle;
+}
+.popup_input{
+	/*position: absolute;*/
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	opacity: 0;
+}
+.input_email .popup_input{
+	opacity: 1;
+	width: 449px;
+	height: initial;
+	padding: 7px 10px;
+	transition: opacity .35s;
+	pointer-events: initial;
+}
+.input_email .popup_prompt{
+	opacity: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+#toggle_email{
+	background-color: #004268;
+	color: #fff;
+	padding: 10px 20px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.cancel{
+	position: absolute;
+	top: 0;
+	right: 20px;
+	font-size: 48px;
+	cursor: pointer;
+}
+.unview_popup #popup{
+	transform: translate(0, 100%);
+	transition: transform .35s;
+}
 .sans{
 	font-family: 'Inter', sans-serif;
 }
