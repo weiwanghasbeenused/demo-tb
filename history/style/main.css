@@ -464,7 +464,84 @@ a{
 	padding-top: 60px;
 	position: relative;
 }
+#footer{
+	padding: 60px 40px;
+	padding-bottom: 140px;
+	background-color: #004268;
+}
+#footer_logo_holder{
+	text-align: center;
+}
+#footer_logo{
+	width: 150px;
+}
+#footer_social_holder{
+	text-align: center;
+	margin-top: 30px;
+}
+#footer_social_holder > a{
+	vertical-align: middle;
+	margin-right: 30px;
+}
+#footer_social_holder > a:last-type{
+	margin-right: 0px;
+}
+#social_facebook > img{
+	width: 27px;
 
+}
+#social_youtube > img{
+	width: 31px;
+}
+#social_instagram > img{
+	width: 28px;
+}
+#social_twitter > img{
+	width: 30px;
+}
+.footer{
+	font-size: 14px;
+	color: #fff;
+}
+#footer_logos_holder{
+	text-align: center;
+	
+}
+#presenterd_holder,
+#sponsored_holder{
+	display: inline-block;
+	vertical-align: top;
+	margin: 30px 30px 0 30px;
+}
+#presenterd_holder > img,
+#sponsored_holder > img{
+	display: inline-block;
+	vertical-align: middle;
+}
+#presenterd_holder{
+	/*width: 180px;*/
+	/*min-width: 25%;*/
+}
+#sponsored_holder{
+	/*width: 528px;*/
+	/*min-width: 75%;*/
+}
+#present_amex{
+	margin-top: 30px;
+	width: 160px;
+}
+#sponsor_nthp{
+	margin-left: 30px;
+	width: 200px;
+}
+#sponsor_tnm{
+	margin-left: 30px;
+	width: 160px;
+}
+#sponsor_nps{
+	margin-left: 30px;
+	width: 60px;
+}
 @media screen and (min-width: 830px){
 	h1{
 		font-size: 68px;
@@ -579,7 +656,28 @@ a{
 		padding-left: 40px;
 	}
 	#project_origins_col2 .text_holder{
-		padding-right: 60px;
+		padding-right: 80px;
+	}
+	#presenterd_holder,
+	#sponsored_holder{
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+	#present_amex{
+		/*margin-top: 30px;*/
+		/*width: 160px;*/
+	}
+	#sponsor_nthp{
+		margin-left: 60px;
+		/*width: 200px;*/
+	}
+	#sponsor_tnm{
+		margin-left: 60px;
+		/*width: 160px;*/
+	}
+	#sponsor_nps{
+		margin-left: 60px;
+		/*width: 60px;*/
 	}
 
 }
